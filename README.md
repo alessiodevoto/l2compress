@@ -6,11 +6,11 @@ Repository for [*A Simple and Effective L2 Norm-Based Method for KV Cache Compre
   <img src="./assets/attention.png" alt="L2 Norm KV Cache Compression" width="600"/>
 </div>
 
-**TL;DR** A strong correlation exists between attention scores and $L_2$ norm of keys (see Figure). This repository provides code to compress the KV Cache in transformer-based language models using an $L_2$ norm-based strategy. By pruning less significant entries, it reduces memory usage while retaining essential information, making model inference more efficient.
+**TL;DR** Tokens with low $L_2$ norm in their key embeddings correlate strongly with high attention scores (see figure). By selectively pruning the KV Cache to retain these important low-norm tokens, we reduce memory usage while maintaining model performance during inference.
 
 ### Installation
 
-Install dependencies with:
+After cloning the repo, install dependencies with:
 
 ```bash
 pip install -r requirements.txt
