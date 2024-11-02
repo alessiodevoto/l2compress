@@ -1,0 +1,10 @@
+accelerate==0.30.1
+bitsandbytes==0.43.1
+datasets==2.19.1
+transformers==4.40.2
+plotly==5.22.0
+kaleido==0.2.1
+nbformat==5.10.4
+rouge_score
+tiktoken
+matplotlib
