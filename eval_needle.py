@@ -30,10 +30,6 @@ def main():
     parser.add_argument('--more_suffix', type=str, default=None)
     parser.add_argument('--hidden_drop', action="store_true")
 
-    # do not use the following args
-    parser.add_argument('--api_key', type=str, default="", help='OpenAI API Key')
-    parser.add_argument('--model_name', type=str, default=None, help='name of model')
-
     # parser = add_args(parser)
 
     # kv cache compression settings
@@ -78,8 +74,6 @@ def main():
         sort_descending=args.sort_descending,
     )
     logger.info(f"adjust_kv_strategy: {adjust_kv_strategy}")
-    # else:
-    #     adjust_kv_strategy = None
 
     if args.snapkv:
         suffix = "snapkv"
@@ -113,8 +107,6 @@ def main():
 
             ht.model_to_test = cast_to_hidden_state_drop(
                 ht.model_to_test,
-                # keep_ratio=0.6,
-                # skip_layers=list(range(32))[:-10],
                 keep_ratio=args.keep_ratio,
                 skip_layers=layers_to_skip,
                 sort_metric='norm',
@@ -130,10 +122,4 @@ def main():
 
 
 if __name__ == '__main__':
-    # try:
-    args = main()
-    # except Exception as e:
-    #     print(e)
-
-    # print("exit")
-    # exit(0)
+    main()
