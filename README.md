@@ -1,6 +1,6 @@
 # L2 Norm-Based KV Cache Compression
 
-> News: The K-norm based compression is now also implemented and available in the [Nvidia KVPress library](https://github.com/NVIDIA/kvpress?tab=readme-ov-file#installation)
+> 🚨 News: The K-norm based compression is now also implemented and available in the [Nvidia KVPress library](https://github.com/NVIDIA/kvpress?tab=readme-ov-file#installation)
 
 Repository for [*A Simple and Effective L2 Norm-Based Method for KV Cache Compression*](https://arxiv.org/abs/2406.11430), presented at EMNLP 2024.
 
